@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/mediaqueries.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <header id="header">
+    <div class="navigation" id="navigation"> <!-- Remove this if it goes haywire -->
+      <div class="l-nav">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="logo">
+        </div>
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <div class="menu-close" id="menu-close"><img src="/images/icon-close.svg" alt=""></div>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburger" id="hamburger"><img src="/images/icon-menu.svg" alt=""></div>
+      <div class="icons">
+        <div id="num">0</div>
+        <img class="cart-img" id="cartImg" onclick="cartImg()" src="/images/icon-cart.svg" alt="cart">
+        <img src="/images/image-avatar.png" alt="avatar image">
+      </div>
+      <div class="cart-empty" id="cartEmpty">
+        <h4>Cart</h4>
+        <p>Your cart is empty</p>
+      </div>
+      
+      <div class="cart-filled" id="cartFilled">
+        <h4>Cart</h4>
+        <div class="products">
+          <div class="img"><img src="/images/image-product-1-thumbnail.jpg" alt=""></div>
+          <div class="text">
+            <h5>Autumn Limited Edition...</h5>
+            <p>$125.00 &times; <em id="quantity"> 3 </em>  <span id="amount">  $375.00</span></p>
+          </div>
+        </div>
+        <img class="delete" id="delete" onclick="deleteProduct()" src="/images/icon-delete.svg" alt="delete icon">
+         <div class="checkout">Checkout</div>
+      </div>
+    </div> <!-- Stop Remove Here -->
+  
+  </header>
+
+  <div class="container" id="container">
+    
+    <div class="content" id="content">
+
+     <div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="/images/image-product-1.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="/images/image-product-2.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="/images/image-product-3.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="/images/image-product-4.jpg" alt=""></div>
+  </div>
+  
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<div class="desk-img" >
+  <div class="main-img">
+    <img src="/images/image-product-1.jpg" alt="sneaker1">
+  </div>
+  <div class="img-peview">
+    <img src="/images/image-product-1-thumbnail.jpg" alt="sneaker1 image-product-1-thumbnail">
+    <img src="/images/image-product-2-thumbnail.jpg" alt="sneaker2 image-product-2-thumbnail">
+    <img src="/images/image-product-3-thumbnail.jpg" alt="sneaker3 image-product-3-thumbnail">
+    <img src="/images/image-product-4-thumbnail.jpg" alt="sneaker4 image-product-4-thumbnail">
+  </div>
+</div>
+
+<div class="r-text">
+        <div class="text">
+          <h4>SNEAKER COMPANY</h4>
+          <h2> Fall Limited Edition Sneakers</h2>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+        </div>
+        <div class="price">
+          <div class="value">
+            <p class="amount">$125.00</p>
+            <p class="percent">50%</p>
+          </div>
+          <p class="discount">$250.00</p>
+        </div>
+        <div class="pad">
+          <div class="cart-value">
+            <div class="minus" onclick="minusCart()"><img src="/images/icon-minus.svg" alt="minus" ></div>
+            <p class="zero" id="zero">0</p>
+           <div class="plus" onclick="addCart()"><img src="/images/icon-plus.svg" alt="plus"></div>
+          </div>
+          <div class="add-to-cart" onclick="addToCart()">
+            <p><img src="/images/icon-cart.svg" alt="icon-cart">Add to cart</p>
+          </div>
+        </div>
+</div>
+
+
+    </div>
+  </div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
